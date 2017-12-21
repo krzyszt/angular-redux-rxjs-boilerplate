@@ -15,8 +15,9 @@ import { createLogger } from 'redux-logger';
 import { createEpicMiddleware } from 'redux-observable';
 
 import { IAppStore } from './IAppStore';
-import { rootReducer } from './root.reducer';
-import { RootEpics } from './root.epic';
+import { rootReducer } from './reducers/root.reducer';
+import { RootEpic } from './epics/root.epic';
+import { AuthActions } from './actions/auth.actions';
 
 @NgModule({
   imports: [
@@ -26,8 +27,8 @@ import { RootEpics } from './root.epic';
   ],
   providers: [
     NgReduxRouter,
-    RootEpics
-
+    RootEpic,
+    AuthActions
   ],
   declarations: []
 })
@@ -35,7 +36,7 @@ export class StoreModule {
   constructor( store: NgRedux<IAppStore>,
                devTools: DevToolsExtension,
                ngReduxRouter: NgReduxRouter,
-               rootEpics: RootEpics ) {
+               rootEpics: RootEpic ) {
 
     // Tell Redux about our reducers and epics. If the Redux DevTools chrome extension is available in the browser,
     // tell Redux about it too.
