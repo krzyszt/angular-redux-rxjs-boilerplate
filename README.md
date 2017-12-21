@@ -7,7 +7,7 @@ A highly opinionated, advanced starter kit for web development using
 <a href="https://redux.js.org/">Redux</a> and 
 <a href="https://redux-observable.js.org/">Redux-observable</a>.
 
-A React version yu can find here <a href="https://github.com/krzyszt/react-redux-rxjs-boilerplate">react-redux-rxjs-boilerplate</a>.
+A React version you can find here <a href="https://github.com/krzyszt/react-redux-rxjs-boilerplate">react-redux-rxjs-boilerplate</a>.
 
 ## Quick start
 
