@@ -13,5 +13,11 @@ export class AuthActions {
       type: types.LOGIN_STARTED,
       payload
     });
-  };
+  }
+
+  logout() {
+    this.store.dispatch({
+      type: types.LOGOUT
+    });
+  }
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 import { AuthActions } from '../../../store/actions/auth.actions';
 
 @Component({
@@ -8,13 +10,14 @@ import { AuthActions } from '../../../store/actions/auth.actions';
 })
 export class LoginPageComponent implements OnInit {
 
-  constructor( private authActions: AuthActions) { }
+  constructor(private authActions: AuthActions, private router: Router) { }
 
   ngOnInit() {
   }
 
   onLogin() {
     this.authActions.login({ user: 'admin', password: 'admin'});
+    this.router.navigate(['/app']);
   }
 
 }
