@@ -6,7 +6,7 @@ import { AuthActions } from '../../../store/actions/auth.actions';
 @Component({
   selector: 'app-app-container',
   templateUrl: './app-container.component.html',
-  styleUrls: ['./app-container.component.css']
+  styleUrls: ['./app-container.component.less']
 })
 export class AppContainerComponent implements OnInit {
 
